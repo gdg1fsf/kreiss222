@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kreiss - Дизайнер</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">KREISS</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link" data-i18n="nav_home">Главная</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="nav_about">Обо мне</a></li>
+                <li><a href="#services" class="nav-link" data-i18n="nav_services">Услуги</a></li>
+                <li><a href="#portfolio" class="nav-link" data-i18n="nav_portfolio">Портфолио</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Контакты</a></li>
+            </ul>
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="ru">RU</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="pl">PL</button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Герой секция -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="line" data-i18n="hero_title_1">Креативный</span>
+                    <span class="line" data-i18n="hero_title_2">Дизайнер</span>
+                </h1>
+                <p class="hero-subtitle" data-i18n="hero_subtitle">Создаю уникальные дизайны для вашего бренда</p>
+                <a href="#contact" class="cta-button" data-i18n="hero_cta">Связаться со мной</a>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Обо мне -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="about_title">Обо мне</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="100" cy="100" r="90" fill="#6C5CE7"/>
+                            <text x="100" y="115" font-size="80" fill="white" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold">K</text>
+                        </svg>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3 data-i18n="about_name">Ярослав (Kreiss)</h3>
+                    <p class="years-experience" data-i18n="about_experience">4 года в дизайне</p>
+                    <p data-i18n="about_text_1">Профессиональный дизайнер с богатым опытом создания визуальных решений. Специализируюсь на разработке сайтов, баннеров для Telegram и социальных сетей, а также комплексном оформлении социальных медиа.</p>
+                    <p data-i18n="about_text_2">Мой подход — сочетание креативности, внимания к деталям и понимания современных трендов дизайна. Каждый проект для меня — возможность создать что-то уникальное и запоминающееся.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h4 data-i18n="stat_1_number">4+</h4>
+                            <p data-i18n="stat_1_text">Лет опыта</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4 data-i18n="stat_2_number">100+</h4>
+                            <p data-i18n="stat_2_text">Проектов</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4 data-i18n="stat_3_number">50+</h4>
+                            <p data-i18n="stat_3_text">Клиентов</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="services_title">Мои услуги</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M8 21H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M12 17V21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="service_1_title">Веб-дизайн</h3>
+                    <p data-i18n="service_1_text">Разработка современных и функциональных сайтов с уникальным дизайном</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M3 9H21" stroke="currentColor" stroke-width="2"/>
+                            <path d="M9 21V9" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="service_2_title">Баннеры для Telegram</h3>
+                    <p data-i18n="service_2_text">Создание привлекательных баннеров для каналов и ботов Telegram</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 8V12L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="service_3_title">Баннеры для соц. сетей</h3>
+                    <p data-i18n="service_3_text">Дизайн баннеров и обложек для всех популярных социальных сетей</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="20" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+                            <path d="M6 19C6 16 8 14 12 14C16 14 18 16 18 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="service_4_title">Оформление соц. сетей</h3>
+                    <p data-i18n="service_4_text">Комплексное оформление профилей и страниц в социальных сетях</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Портфолио -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="portfolio_title">Портфолио</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="portfolio-grid">
+                <!-- Проект 1 -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio/project1.jpg" alt="Проект 1" onerror="this.parentElement.innerHTML='<div class=\'portfolio-placeholder\' style=\'background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\'></div>'">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 data-i18n="portfolio_1_title">Веб-дизайн проект</h3>
+                        <p data-i18n="portfolio_1_desc">Landing page для стартапа</p>
+                    </div>
+                </div>
+                
+                <!-- Проект 2 -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio/project2.jpg" alt="Проект 2" onerror="this.parentElement.innerHTML='<div class=\'portfolio-placeholder\' style=\'background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);\'></div>'">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 data-i18n="portfolio_2_title">Telegram баннер</h3>
+                        <p data-i18n="portfolio_2_desc">Дизайн для бизнес канала</p>
+                    </div>
+                </div>
+                
+                <!-- Проект 3 -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio/project3.jpg" alt="Проект 3" onerror="this.parentElement.innerHTML='<div class=\'portfolio-placeholder\' style=\'background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);\'></div>'">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 data-i18n="portfolio_3_title">Соц. сети</h3>
+                        <p data-i18n="portfolio_3_desc">Комплексное оформление Instagram</p>
+                    </div>
+                </div>
+                
+                <!-- Проект 4 -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio/project4.jpg" alt="Проект 4" onerror="this.parentElement.innerHTML='<div class=\'portfolio-placeholder\' style=\'background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);\'></div>'">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 data-i18n="portfolio_4_title">Корпоративный сайт</h3>
+                        <p data-i18n="portfolio_4_desc">Дизайн для IT компании</p>
+                    </div>
+                </div>
+                
+                <!-- Проект 5 -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio/project5.jpg" alt="Проект 5" onerror="this.parentElement.innerHTML='<div class=\'portfolio-placeholder\' style=\'background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);\'></div>'">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 data-i18n="portfolio_5_title">Баннеры VK</h3>
+                        <p data-i18n="portfolio_5_desc">Серия баннеров для сообщества</p>
+                    </div>
+                </div>
+                
+                <!-- Проект 6 -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio/project6.jpg" alt="Проект 6" onerror="this.parentElement.innerHTML='<div class=\'portfolio-placeholder\' style=\'background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);\'></div>'">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 data-i18n="portfolio_6_title">Брендинг</h3>
+                        <p data-i18n="portfolio_6_desc">Фирменный стиль для блогера</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="contact_title">Свяжитесь со мной</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 data-i18n="contact_heading">Готовы начать проект?</h3>
+                    <p data-i18n="contact_text">Я всегда открыт для обсуждения новых проектов и креативных идей. Свяжитесь со мной удобным для вас способом!</p>
+                    <div class="contact-methods">
+                        <a href="https://t.me/krelss" class="contact-method" target="_blank">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M16 8L9 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M16 8L12 16L9 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="contact-text">
+                                <h4 data-i18n="contact_telegram">Telegram</h4>
+                                <p>@krelss</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <div class="contact-options">
+                        <!-- Прямая ссылка на Telegram -->
+                        <a href="https://t.me/krelss" class="contact-option telegram-contact" target="_blank">
+                            <div class="option-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M16 8L9 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M16 8L12 16L9 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="option-content">
+                                <h4 data-i18n="telegram_write">Написать в Telegram</h4>
+                                <p data-i18n="telegram_write_desc">Самый быстрый способ связаться</p>
+                            </div>
+                        </a>
+
+                        <!-- Email -->
+                        <a href="mailto:twork4620@gmail.com" class="contact-option email-contact">
+                            <div class="option-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="option-content">
+                                <h4 data-i18n="email_write">Написать на Email</h4>
+                                <p>twork4620@gmail.com</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Форма остается как альтернатива -->
+                    <div class="or-divider">
+                        <span data-i18n="or_fill_form">Или заполните форму</span>
+                    </div>
+
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" data-i18n-placeholder="form_name" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" data-i18n-placeholder="form_email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" data-i18n-placeholder="form_message" placeholder="Расскажите о вашем проекте" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button" data-i18n="form_submit">Отправить сообщение</button>
+                        <p class="form-note" data-i18n="form_note">* Форма может не работать локально. Используйте Telegram для гарантированной связи.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Kreiss. <span data-i18n="footer_rights">Все права защищены.</span></p>
+            <div class="social-links">
+                <a href="https://t.me/krelss" target="_blank">Telegram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
