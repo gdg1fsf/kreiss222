@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>kreiss.dev — лендинги для кофеен и малого бизнеса</title>
+<meta name="description" content="Разрабатываю быстрые лендинги для кофеен, барбершопов, студий и другого малого бизнеса. Запуск за 5–7 дней.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--ink:#0A1633;--muted:#5A6A8A;--blue:#2F63F0;--deep:#1B3FB8;--soft:#EEF3FF;--line:#0A163318;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:90px;scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--ink);font:400 17px/1.6 Manrope,system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3{margin:0;line-height:1.1;letter-spacing:-.025em;font-weight:800}
+p{margin:0}a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.w{max-width:1120px;margin:0 auto;padding:0 24px}
+.bdg{width:30px;height:30px;flex:none;display:inline-block}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;font-weight:700;text-decoration:none;padding:15px 28px;border-radius:999px;transition:transform .2s,box-shadow .2s;box-shadow:0 10px 24px #2f63f040}
+.btn:hover{transform:translateY(-3px);box-shadow:0 16px 30px #2f63f060}
+.btn.o{background:none;color:var(--ink);box-shadow:none;border:2px solid var(--ink)}
+.btn.o:hover{background:var(--ink);color:#fff}
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:#ffffffcc;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);transition:box-shadow .3s}
+header.sc{box-shadow:0 6px 24px #0a163314}
+.hd{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:inline-flex;align-items:center;gap:10px;font-size:25px;font-weight:300;letter-spacing:-.03em;text-decoration:none}
+.logo .bdg{width:34px;height:34px;animation:pop .9s cubic-bezier(.3,1.6,.5,1) both}
+.logo:hover .bdg{animation:spin .7s}
+@keyframes pop{from{transform:scale(0) rotate(-140deg)}}@keyframes spin{to{transform:rotate(360deg)}}
+nav a{margin:0 14px;text-decoration:none;font-weight:600;font-size:15px;color:var(--muted);transition:color .2s}
+nav a:hover{color:var(--blue)}
+#bar{position:fixed;top:0;left:0;right:0;height:3px;background:var(--blue);transform:scaleX(0);transform-origin:left;z-index:60}
+/* hero */
+.hero{position:relative;overflow:clip;padding:56px 0 90px}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;z-index:-1;animation:drift 14s ease-in-out infinite alternate}
+.b-a{width:420px;height:420px;background:#9DBBFF;top:-120px;right:-60px}
+.b-b{width:320px;height:320px;background:#C9DAFF;bottom:-80px;left:-60px;animation-delay:-6s}
+@keyframes drift{to{transform:translate(40px,50px) scale(1.15)}}
+.hg{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--soft);color:var(--blue);font-weight:700;font-size:14px;padding:6px 16px 6px 8px;border-radius:999px;margin-bottom:22px}
+.pill .bdg{width:24px;height:24px}
+h1{font-size:clamp(34px,4.7vw,58px)}
+h1 em{font-style:normal;color:var(--blue)}
+h1 .wd{display:inline-block;opacity:0;transform:translateY(.6em);animation:up .7s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes up{to{opacity:1;transform:none}}
+.lead{font-size:19px;color:var(--muted);max-width:30em;margin:24px 0 32px}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.facts{display:flex;gap:34px;margin-top:44px;flex-wrap:wrap}
+.facts b{display:block;font-size:26px;font-weight:800;color:var(--blue)}.facts span{font-size:14px;color:var(--muted)}
+/* browser mockup */
+.stage{position:relative}
+.browser{background:#fff;border-radius:18px;box-shadow:0 30px 70px #2f63f033,0 0 0 1px var(--line);overflow:hidden;animation:fl 7s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-12px)}}
+.bar{display:flex;align-items:center;gap:6px;padding:12px 16px;background:var(--soft)}
+.bar i{width:10px;height:10px;border-radius:50%;background:#0a163333}
+.bar span{margin-left:12px;flex:1;background:#fff;border-radius:99px;padding:3px 14px;font-size:12px;color:var(--muted)}
+.pg{padding:14px;display:grid;gap:12px}
+.pg>*{opacity:0;transform:translateY(18px);animation:up .7s cubic-bezier(.2,.8,.2,1) forwards}
+.p1{background:linear-gradient(135deg,#2F63F0,#1B3FB8);color:#fff;border-radius:12px;padding:22px 20px;animation-delay:.7s!important}
+.p1 b{display:block;font-size:22px;font-weight:800}.p1 u{display:block;height:7px;border-radius:4px;background:#ffffff59;margin-top:9px;width:80%}.p1 u+u{width:55%}
+.p1 em{display:inline-block;font-style:normal;font-size:12px;font-weight:700;background:#fff;color:var(--blue);border-radius:99px;padding:6px 14px;margin-top:14px;animation:pulse 2.4s ease-in-out 3s infinite}
+@keyframes pulse{50%{transform:scale(1.1)}}
+.pm{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.pm div{background:var(--soft);border-radius:10px;padding:10px;animation:up .6s forwards;opacity:0;transform:translateY(18px)}
+.pm div:nth-child(1){animation-delay:1.3s}.pm div:nth-child(2){animation-delay:1.55s}.pm div:nth-child(3){animation-delay:1.8s}
+.pm s{display:block;height:44px;border-radius:7px;background:#C9DAFF;margin-bottom:8px}.pm u{display:block;height:6px;border-radius:3px;background:#0a163326;width:70%}
+.p3{display:flex;justify-content:space-between;align-items:center;border-radius:12px;border:1.5px dashed #2f63f066;padding:12px 16px;font-size:13px;font-weight:700;color:var(--blue);animation-delay:2.2s!important}
+.chip{position:absolute;background:#fff;border-radius:14px;padding:10px 16px;font-weight:700;font-size:14px;box-shadow:0 14px 30px #2f63f033;display:flex;align-items:center;gap:8px;opacity:0;animation:up .7s forwards,fl 6s ease-in-out infinite;z-index:2}
+.c1{right:-10px;top:-22px;animation-delay:2.5s,2.5s}.c2{left:-20px;bottom:-18px;animation-delay:2.9s,3s}
+.chip .bdg{width:22px;height:22px}
+/* marquee */
+.mq{border-block:1px solid var(--line);overflow:hidden;padding:18px 0;background:var(--soft)}
+.tr{display:flex;gap:44px;width:max-content;animation:sc 34s linear infinite;font-weight:800;font-size:22px;letter-spacing:-.02em;white-space:nowrap}
+.tr i{font-style:normal;color:var(--blue)}.mq:hover .tr{animation-play-state:paused}
+@keyframes sc{to{transform:translateX(-50%)}}
+/* sections */
+section{padding:96px 0}
+.k{color:var(--blue);font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px;display:block}
+h2{font-size:clamp(28px,4vw,46px);max-width:16em;margin-bottom:48px}
+.js .rv{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:minmax(190px,auto);gap:18px}
+.t{border-radius:24px;padding:28px;background:var(--soft);position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
+.t:hover{transform:translateY(-6px);box-shadow:0 22px 44px #2f63f030}
+.t small{font-weight:800;font-size:14px;opacity:.55}
+.t h3{font-size:22px;margin:10px 0}.t p{color:var(--muted);font-size:16px}
+.t.bl{background:linear-gradient(145deg,#4A7DFF,#1B3FB8);color:#fff}.t.bl p{color:#ffffffe0}
+.t.dk{background:var(--ink);color:#fff}.t.dk p{color:#ffffffc0}
+.t.big{grid-column:span 2;grid-row:span 2;display:flex;flex-direction:column;justify-content:flex-end}
+.t.big h3{font-size:34px}
+.t.wide{grid-column:span 2}.t.full{grid-column:1/-1}
+.t .bdg{position:absolute;right:22px;top:22px;width:56px;height:56px;animation:fl 5s ease-in-out infinite}
+/* stacked steps */
+.stk{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.stk .l{position:sticky;top:120px}.stk .l p{color:var(--muted);max-width:22em}
+.st{position:sticky;top:calc(100px + var(--i)*22px);border-radius:26px;padding:34px;min-height:230px;margin-bottom:30px;box-shadow:0 -10px 40px #0a16331a}
+.st:nth-child(1){background:var(--soft)}.st:nth-child(2){background:#D8E4FF}.st:nth-child(3){background:var(--blue);color:#fff}.st:nth-child(4){background:var(--ink);color:#fff}
+.st b{font-size:56px;font-weight:800;line-height:1;opacity:.28}
+.st h3{font-size:26px;margin:14px 0 8px}.st span{display:inline-block;font-weight:700;font-size:13px;background:#ffffffaa;color:var(--ink);border-radius:99px;padding:3px 12px;margin-bottom:6px}
+.st p{max-width:28em;opacity:.8}
+/* works */
+.wk{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.feat{grid-column:1/-1;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;background:var(--soft);border-radius:28px;padding:34px}
+.mk{border-radius:16px;padding:18px;color:#fff;position:relative;overflow:hidden;min-height:190px;background:var(--c,#2F63F0);transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.mk:hover,.feat:hover .mk{transform:perspective(700px) rotateX(4deg) rotateY(-6deg) scale(1.03)}
+.mk i{display:inline-block;width:8px;height:8px;border-radius:50%;background:#fff6;margin-right:5px}
+.mk b{display:block;font-size:30px;font-weight:800;margin:18px 0 12px;color:var(--a,#fff)}
+.mk u{display:block;height:8px;border-radius:4px;background:#ffffff4d;margin-bottom:8px;width:80%}.mk u+u{width:52%}
+.mk em{display:block;width:96px;height:26px;border-radius:99px;background:var(--a,#fff);margin-top:16px;animation:pulse 2.4s ease-in-out infinite}
+.cs h3{font-size:19px;margin:16px 0 6px}.cs p{color:var(--muted);font-size:15px}
+.tg{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}.tg span{font-size:13px;font-weight:600;background:#fff;border-radius:99px;padding:3px 12px;border:1px solid var(--line)}
+.badge{display:inline-flex;align-items:center;gap:6px;background:var(--blue);color:#fff;font-size:13px;font-weight:700;border-radius:99px;padding:4px 14px 4px 6px;margin-bottom:12px}
+.badge .bdg{width:20px;height:20px;filter:brightness(1.6)}
+.feat .btn{margin-top:22px}
+.note{color:var(--muted);font-size:14px;margin-top:22px}
+/* numbers */
+.nb{background:linear-gradient(135deg,#2F63F0,#1B3FB8);color:#fff;border-radius:32px;padding:56px 48px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.nb b{display:block;font-size:clamp(40px,5.5vw,64px);font-weight:800;line-height:1}.nb span{display:block;margin-top:10px;color:#ffffffd0;font-size:15px}
+/* pricing */
+.pr{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.pl{border:2px solid var(--line);border-radius:26px;padding:32px;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s;background:#fff}
+.pl:hover{transform:translateY(-8px);box-shadow:0 24px 50px #2f63f030}
+.pl.hot{background:linear-gradient(150deg,#4A7DFF,#1B3FB8);color:#fff;border-color:transparent;transform:scale(1.03)}
+.pl.hot:hover{transform:scale(1.03) translateY(-8px)}
+.pl h3{font-size:20px}.pl .pc{font-size:44px;font-weight:800;letter-spacing:-.03em;margin:14px 0 6px}
+.pl p{color:var(--muted)}.pl.hot p,.pl.hot li{color:#ffffffe6}
+.pl ul{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:10px}
+.pl li{padding-left:28px;position:relative;color:var(--muted);font-size:16px}
+.pl li::before{content:"";position:absolute;left:0;top:5px;width:16px;height:16px;border-radius:50%;background:var(--blue) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.3l2.3 2.3 4.7-5' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.pl.hot li::before{background-color:#fff;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.3l2.3 2.3 4.7-5' fill='none' stroke='%232F63F0' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+/* faq */
+details{border-bottom:1px solid var(--line);padding:22px 0}
+summary{cursor:pointer;font-weight:700;font-size:19px;list-style:none;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:28px;line-height:1;color:var(--blue);transition:transform .3s}
+details[open] summary::after{transform:rotate(135deg)}
+details p{margin-top:12px;color:var(--muted);max-width:42em;animation:up .4s both}
+/* contact */
+.ct{background:linear-gradient(135deg,#2F63F0,#1B3FB8);color:#fff;border-radius:36px;padding:72px 48px;text-align:center;position:relative;overflow:hidden}
+.ct::before,.ct::after{content:"";position:absolute;border-radius:50%;background:#ffffff1c;animation:drift 12s ease-in-out infinite alternate}
+.ct::before{width:300px;height:300px;left:-80px;top:-100px}.ct::after{width:220px;height:220px;right:-50px;bottom:-80px;animation-delay:-5s}
+.ct>*{position:relative}
+.ct .bdg{width:76px;height:76px;margin-bottom:20px;animation:fl 4s ease-in-out infinite;background:#fff;border-radius:50%;padding:6px}
+.ct h2{margin:0 auto 16px;max-width:14em}.ct p{color:#ffffffdd;max-width:30em;margin:0 auto 32px}
+.ct .row{justify-content:center}
+.ct .btn{background:#fff;color:var(--blue);box-shadow:0 12px 28px #0a163340}
+.ct .btn.o{background:none;color:#fff;border-color:#fff}.ct .btn.o:hover{background:#fff;color:var(--blue)}
+footer{padding:36px 0 48px;color:var(--muted);font-size:14px}
+.ft{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
+.ft a{margin-left:18px;text-decoration:none}.ft a:hover{color:var(--blue)}
+.fab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:40;background:var(--blue);color:#fff;font-weight:700;text-decoration:none;padding:14px 24px;border-radius:999px;box-shadow:0 12px 28px #2f63f066;opacity:0;transform:translateY(24px);pointer-events:none;transition:all .4s}
+.fab.show{opacity:1;transform:none;pointer-events:auto}
+@media (max-width:900px){nav{display:none}.hg,.stk,.feat{grid-template-columns:1fr}.stk .l{position:static}.bento{grid-template-columns:1fr 1fr}.t.big,.t.wide,.t.full{grid-column:span 2}.t.big{grid-row:auto;min-height:260px}.wk,.pr{grid-template-columns:1fr}.nb{grid-template-columns:1fr 1fr;padding:40px 28px}.pl.hot{transform:none}.pl.hot:hover{transform:translateY(-8px)}section{padding:68px 0}.c1{right:-4px}.c2{left:-4px}}
+@media (max-width:560px){.bento{grid-template-columns:1fr}.t.big,.t.wide,.t.full{grid-column:auto}.ct{padding:52px 22px}.st{top:calc(84px + var(--i)*14px)}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.js .rv,h1 .wd,.pg>*,.pm div,.chip{opacity:1!important;transform:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5C8DFF"/><stop offset="1" stop-color="#2554E6"/></linearGradient><symbol id="b" viewBox="0 0 100 100"><path id="bp" fill="url(#g)"/><path d="M29 52l14 14 27-31" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></symbol></defs></svg>
+<div id="bar"></div>
+
+<header id="hd"><div class="w hd">
+<a class="logo" href="#top"><svg class="bdg" aria-hidden="true"><use href="#b"/></svg>kreiss.dev</a>
+<nav><a href="#why">Зачем</a><a href="#how">Процесс</a><a href="#works">Работы</a><a href="#price">Цены</a><a href="#faq">Вопросы</a></nav>
+<a class="btn" href="#contact" style="padding:11px 22px">Написать</a>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="blob b-a"></div><div class="blob b-b"></div>
+<div class="w hg">
+<div>
+<div class="pill"><svg class="bdg" aria-hidden="true"><use href="#b"/></svg>Лендинги для малого бизнеса</div>
+<h1 id="h1">Лендинг, который приводит клиентов в вашу кофейню</h1>
+<p class="lead">Меню, адрес, часы работы и кнопка «Позвонить» на одной быстрой странице. Запускаю за 5–7 дней, под ключ.</p>
+<div class="row"><a class="btn" href="#contact">Заказать лендинг</a><a class="btn o" href="#works">Смотреть работы</a></div>
+<div class="facts"><div><b>5–7 дней</b><span>до запуска</span></div><div><b>от 300 €</b><span>под ключ</span></div><div><b>100%</b><span>удобно с телефона</span></div></div>
+</div>
+<div class="stage">
+<div class="browser" aria-hidden="true">
+<div class="bar"><i></i><i></i><i></i><span>zerno-coffee.com</span></div>
+<div class="pg">
+<div class="p1"><b>Кофейня «Зерно»</b><u></u><u></u><em>Построить маршрут</em></div>
+<div class="pm"><div><s></s><u></u></div><div><s></s><u></u></div><div><s></s><u></u></div></div>
+<div class="p3"><span>Открыто с 8:00 до 20:00</span><span>Позвонить →</span></div>
+</div></div>
+<div class="chip c1"><svg class="bdg" aria-hidden="true"><use href="#b"/></svg>Адаптив под телефон</div>
+<div class="chip c2">⚡ Грузится за секунды</div>
+</div>
+</div></div>
+
+<div class="mq" aria-hidden="true"><div class="tr" id="tr"><span>Кофейни</span><i>✦</i><span>Барбершопы</span><i>✦</i><span>Цветочные</span><i>✦</i><span>Студии красоты</span><i>✦</i><span>Пекарни</span><i>✦</i><span>Фотографы</span><i>✦</i><span>Автосервисы</span><i>✦</i><span>Тренеры</span><i>✦</i></div></div>
+
+<section id="why"><div class="w">
+<span class="k rv">Зачем это нужно</span>
+<h2 class="rv">Своя страница работает на вас, даже когда вы закрылись</h2>
+<div class="bento">
+<div class="t bl big rv"><svg class="bdg" aria-hidden="true"><use href="#b"/></svg><small>01</small><h3>Вас находят в Google</h3><p>Люди ищут «кофе рядом» и «барбершоп в центре». Страница с адресом, фото и отзывами попадает в эти запросы, а пост в соцсети нет.</p></div>
+<div class="t rv"><small>02</small><h3>Меню всегда под рукой</h3><p>Не нужно листать сторис и отвечать в директе.</p></div>
+<div class="t dk rv"><small>03</small><h3>Заявка в один клик</h3><p>«Позвонить», «Маршрут», «Забронировать».</p></div>
+<div class="t wide rv"><small>04</small><h3>Доверие к заведению</h3><p>Свой сайт с фото, отзывами и контактами выглядит надёжнее, чем аккаунт без сайта.</p></div>
+<div class="t full rv"><small>05</small><h3>Свой адрес в интернете</h3><p>Страница не зависит от алгоритмов ленты и не показывает рекламу ваших конкурентов рядом.</p></div>
+</div></div></section>
+
+<section id="how" style="background:var(--soft)"><div class="w stk">
+<div class="l"><span class="k rv">Как это работает</span><h2 class="rv" style="margin-bottom:20px">Четыре шага до запуска</h2><p class="rv">Листайте вниз: каждый шаг ложится поверх предыдущего. Всё занимает около недели.</p></div>
+<div>
+<div class="st" style="--i:0"><b>01</b><br><span>День 1</span><h3>Знакомство</h3><p>Созвон на 20 минут. Вы рассказываете о заведении и присылаете фото, меню и логотип.</p></div>
+<div class="st" style="--i:1"><b>02</b><br><span>Дни 2–3</span><h3>Макет и тексты</h3><p>Присылаю дизайн и тексты под ваш бренд. Вы говорите, что поменять.</p></div>
+<div class="st" style="--i:2"><b>03</b><br><span>Дни 4–6</span><h3>Правки и сборка</h3><p>Вношу правки, собираю страницу, подключаю карту и кнопки, проверяю на разных телефонах.</p></div>
+<div class="st" style="--i:3"><b>04</b><br><span>День 7</span><h3>Запуск</h3><p>Подключаю домен и сертификат, проверяю скорость, и сайт открыт для гостей.</p></div>
+</div></div></section>
+
+<section id="works"><div class="w">
+<span class="k rv">Работы</span>
+<h2 class="rv">Реальный проект и концепты</h2>
+<div class="wk">
+<div class="feat rv"><div class="mk" style="--c:#0E1B2E;--a:#FFB020"><i></i><i></i><i></i><b>kd-transfer</b><u></u><u></u><em></em></div>
+<div><span class="badge"><svg class="bdg" aria-hidden="true"><use href="#b"/></svg>Реальный проект</span><h3 style="font-size:30px">kd-transfer.com</h3><p style="color:var(--muted);margin-top:10px">Рабочий сайт, который я разработал и запустил. Он открыт в интернете для любого посетителя.</p><div class="tg"><span>Разработка</span><span>Запуск</span><span>Адаптив</span></div><a class="btn" href="https://kd-transfer.com" target="_blank" rel="noopener">Открыть сайт ↗</a></div></div>
+<div class="cs rv"><div class="mk"><i></i><i></i><i></i><b>Зерно</b><u></u><u></u><em></em></div><h3>Кофейня «Зерно»</h3><p>Спокойная синяя палитра, меню с ценами и кнопка маршрута.</p><div class="tg"><span>Меню</span><span>Карта</span></div></div>
+<div class="cs rv"><div class="mk" style="--c:#1B1B1F;--a:#E5484D"><i></i><i></i><i></i><b>Борода</b><u></u><u></u><em></em></div><h3>Барбершоп «Борода»</h3><p>Тёмный стиль, прайс по услугам и запись через Telegram.</p><div class="tg"><span>Прайс</span><span>Запись</span></div></div>
+<div class="cs rv"><div class="mk" style="--c:#F6DFE3;--a:#2F6B4F;color:#3A2A2E"><i></i><i></i><i></i><b>Флора</b><u style="background:#3a2a2e30"></u><u style="background:#3a2a2e30"></u><em></em></div><h3>Цветочная студия «Флора»</h3><p>Светлый дизайн, каталог букетов и форма заказа доставки.</p><div class="tg"><span>Каталог</span><span>Заказ</span></div></div>
+</div>
+<p class="note rv">Кофейня, барбершоп и цветочная студия — учебные концепты, а не работы клиентов.</p>
+</div></section>
+
+<section style="padding-top:0"><div class="w"><div class="nb rv">
+<div><b data-to="7" data-pre="≤ ">0</b><span>дней от старта до запуска</span></div>
+<div><b data-to="90" data-suf="+">0</b><span>баллов скорости PageSpeed — моя цель</span></div>
+<div><b data-to="24" data-pre="< ">0</b><span>часа на ответ вам</span></div>
+<div><b data-to="3">0</b><span>месяца поддержки после запуска</span></div>
+</div></div></section>
+
+<section id="price" style="padding-top:0"><div class="w">
+<span class="k rv">Стоимость</span><h2 class="rv">Понятные цены без сюрпризов</h2>
+<div class="pr">
+<div class="pl rv"><h3>Старт</h3><div class="pc">300 €</div><p>Простая визитка для заведения</p><ul><li>Один экран с главным</li><li>Контакты и карта</li><li>Версия для телефона</li></ul></div>
+<div class="pl hot rv"><h3>Кофейня · популярный</h3><div class="pc">550 €</div><p>Всё, чтобы принимать гостей</p><ul><li>Всё из «Старт»</li><li>Меню с ценами и фото</li><li>Отзывы и галерея</li><li>Кнопки соцсетей и заказа</li></ul></div>
+<div class="pl rv"><h3>Под ключ</h3><div class="pc">900 €</div><p>Запуск без хлопот для вас</p><ul><li>Всё из «Кофейня»</li><li>Тексты и подбор фото</li><li>Домен и хостинг на год</li><li>Поддержка 3 месяца</li></ul></div>
+</div>
+<p class="note rv">Цены ориентировочные. Точную стоимость назову после короткого разговора.</p>
+</div></section>
+
+<section id="faq" style="padding-top:0"><div class="w" style="max-width:860px">
+<span class="k rv">Вопросы</span><h2 class="rv">Частые вопросы</h2>
+<details class="rv"><summary>Чем лендинг отличается от обычного сайта?</summary><p>Лендинг — это одна страница с одной целью: чтобы человек позвонил, записался или пришёл. Он дешевле и запускается быстрее многостраничного сайта, а малому бизнесу обычно хватает именно его.</p></details>
+<details class="rv"><summary>Что нужно от меня для старта?</summary><p>Рассказать о заведении, прислать логотип, фото и меню или прайс. Если фото нет, помогу подобрать их и подскажу, как снять хорошие кадры на телефон.</p></details>
+<details class="rv"><summary>Смогу ли я сам менять цены и тексты?</summary><p>Да. Покажу, как обновлять меню и контакты, программист для этого не нужен. Крупные правки можно заказать у меня отдельно.</p></details>
+<details class="rv"><summary>Сколько стоят домен и хостинг?</summary><p>Домен обычно стоит от 10 до 20 € в год, хостинг для лендинга дешёвый или бесплатный. В тарифе «Под ключ» я оформляю всё на вас и оплачиваю первый год.</p></details>
+<details class="rv"><summary>Что если мне не понравится дизайн?</summary><p>Я показываю макет до запуска и вношу правки по вашим комментариям. Раунды правок входят в стоимость.</p></details>
+</div></section>
+
+<section id="contact" style="padding-top:0"><div class="w"><div class="ct rv">
+<svg class="bdg" aria-hidden="true"><use href="#b"/></svg>
+<h2>Расскажите о своём заведении</h2>
+<p>Напишите пару строк: чем занимаетесь и что нужно. Быстрее всего отвечаю в Telegram.</p>
+<div class="row"><a class="btn" href="https://t.me/krelss">Telegram @krelss</a><a class="btn o" href="mailto:twork4620@gmail.com">twork4620@gmail.com</a></div>
+</div></div></section>
+</main>
+
+<footer><div class="w ft"><span>© 2026 kreiss.dev · Лендинги для малого бизнеса</span><span><a href="#works">Работы</a><a href="#price">Цены</a><a href="#faq">Вопросы</a></span></div></footer>
+<a class="fab" id="fab" href="#contact">Написать</a>
+
+<script>
+(function(){
+document.documentElement.classList.add('js');
+var P=[];for(var i=0;i<150;i++){var t=2*Math.PI*i/150,r=46+3.2*Math.cos(10*t);P.push((50+r*Math.cos(t)).toFixed(1)+' '+(50+r*Math.sin(t)).toFixed(1))}
+document.getElementById('bp').setAttribute('d','M'+P.join(' L')+'Z');
+var h=document.getElementById('h1');
+h.innerHTML=h.textContent.split(' ').map(function(w,i){return '<span class="wd" style="animation-delay:'+(.1+i*.08)+'s">'+(w=='кофейню'?'<em>'+w+'</em>':w)+'</span>'}).join(' ');
+var t=document.getElementById('tr');t.innerHTML+=t.innerHTML;
+var red=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function count(b){var to=+b.dataset.to,pre=b.dataset.pre||'',suf=b.dataset.suf||'',st=null;
+if(red){b.textContent=pre+to+suf;return}
+function f(ts){st=st||ts;var k=Math.min((ts-st)/1500,1);b.textContent=pre+Math.round(to*(1-Math.pow(1-k,3)))+suf;if(k<1)requestAnimationFrame(f)}requestAnimationFrame(f)}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;e.target.classList.add('in');io.unobserve(e.target);e.target.querySelectorAll('[data-to]').forEach(count)})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(e,i){io.observe(e)});
+var bar=document.getElementById('bar'),fab=document.getElementById('fab'),hd=document.getElementById('hd');
+function sc(){var m=document.documentElement.scrollHeight-innerHeight;bar.style.transform='scaleX('+(m>0?scrollY/m:0)+')';fab.classList.toggle('show',scrollY>700);hd.classList.toggle('sc',scrollY>10)}
+addEventListener('scroll',sc,{passive:true});sc();
+})();
+</script>
+</body>
+</html>
